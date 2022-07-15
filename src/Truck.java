@@ -5,9 +5,12 @@ public class Truck extends Vehicle implements Service {
 
     @Override
     public void check() {
-        ServiceStation.updateTyres(getWheelsCount(), getModelName());
-        ServiceStation.checkEngine();
-        ServiceStation.checkTrailer();
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
+        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем прицеп");
         System.out.println();
     }
 }

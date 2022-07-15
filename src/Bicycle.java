@@ -4,7 +4,10 @@ public class Bicycle extends Vehicle implements Service{
     }
     @Override
     public void check() {
-            ServiceStation.updateTyres(getWheelsCount(), getModelName());
+            System.out.println("Обслуживаем " + getModelName());
+            for (int i = 0; i < getWheelsCount(); i++) {
+                System.out.println("Меняем покрышку");
+            }
         System.out.println();
             }
     }

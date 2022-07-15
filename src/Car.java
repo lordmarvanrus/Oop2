@@ -5,8 +5,11 @@ public class Car extends Vehicle implements Service {
 
     @Override
     public void check() {
-        ServiceStation.updateTyres(getWheelsCount(), getModelName());
-        ServiceStation.checkEngine();
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
+        System.out.println("Проверяем двигатель");
         System.out.println();
     }
 }
