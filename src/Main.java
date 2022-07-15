@@ -1,5 +1,9 @@
+import java.security.Provider;
+
 public class Main {
     public static void main(String[] args) {
+        ServiceStation service = new ServiceStation();
+
         Car car = new Car("car1", 4);
         Car car2 = new Car("car2", 4);
 
@@ -12,5 +16,6 @@ public class Main {
         bicycle.check();
         truck2.check();
         car.check();
+        service.check(bicycle2);
     }
 }
